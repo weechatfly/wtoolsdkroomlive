@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
         final RoomLiveParams roomLiveParams = new RoomLiveParams(mContext);
         final WToolSDK wToolSDK = new WToolSDK();
-        this.setTitle(this.getTitle() + " - V" + wToolSDK.getVersion());
+        //this.setTitle(this.getTitle() + " - V" + wToolSDK.getVersion());
 
         configUtils = new ConfigUtils(this);
         wToolSDK.encodeValue("1");
