@@ -379,6 +379,10 @@ public class MainActivity extends AppCompatActivity {
                                         }
                                     }
                                 }
+                                if(checks[i+1])
+                                {
+                                    selectedWxIdIndex.add(String.valueOf(i));
+                                }
                             }
 
 

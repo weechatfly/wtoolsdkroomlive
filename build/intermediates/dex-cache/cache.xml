@@ -52,7 +52,7 @@
         jumboMode="false"
         optimize="true"
         revision="25.0.0"
-        sha1="56b29e9bf272f1824b1d73b78ff8dccd74edcdea">
+        sha1="ba665c0be9ff9704c717c18b2d887c0f4678a7f5">
         <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\wtoolsdk_7cf5d844da0de1584c5720f175bc42b5d0459daa.jar" />
     </item>
     <item
