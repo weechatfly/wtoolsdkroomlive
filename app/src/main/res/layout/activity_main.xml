@@ -112,21 +112,6 @@
             android:checked="false"
             tools:tag="1" />
 
-        <CheckBox
-            android:text="图片"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/chkMessageText"
-            android:id="@+id/chkMessageImage"
-            android:checked="false" />
-        <CheckBox
-            android:text="语音"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/chkMessageImage"
-            android:id="@+id/chkMessageVoice"
-            android:checked="false" />
-
     <Button
         android:text="开始直播"
         android:layout_width="wrap_content"
@@ -140,14 +125,34 @@
         android:layout_alignParentEnd="true" />
 
     <CheckBox
+        android:text="图片"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chkMessageImage"
+        android:checked="false"
+        android:layout_below="@+id/labelTransferMessage"
+        android:layout_toRightOf="@+id/chkMessageText"
+        android:layout_toEndOf="@+id/chkMessageText" />
+
+    <CheckBox
+            android:text="语音"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:id="@+id/chkMessageVoice"
+            android:checked="false"
+        android:layout_below="@+id/labelTransferMessage"
+        android:layout_toRightOf="@+id/chkMessageImage"
+        android:layout_toEndOf="@+id/chkMessageImage" />
+
+    <CheckBox
         android:text="视频"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chkMessageVideo"
-        android:layout_below="@+id/chkMessageVoice"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:checked="false" />
+        android:checked="false"
+        android:layout_below="@+id/labelTransferMessage"
+        android:layout_toRightOf="@+id/chkMessageVoice"
+        android:layout_toEndOf="@+id/chkMessageVoice" />
 
 
 </RelativeLayout>
