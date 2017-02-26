@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_6874c3a3000acded6bffacf9e69b700bff7dcd9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_46c12b35beef9f2d2fa4b4ee431ddc6504b9938d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_0e32dbd14507f5116fcfb57d4d53193807a6ccba.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_c6906e0dd3d0cfdff9dfe1cab35e6fc895c6a062.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_1ade858c42988d9b8bbdfab1014f733fe1b5f4fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\libs\wtoolsdk.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="56b29e9bf272f1824b1d73b78ff8dccd74edcdea">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\wtoolsdk_7cf5d844da0de1584c5720f175bc42b5d0459daa.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_3dcc6b949181e742865c508c8a54639142900808.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_f4af80211081ce17736eda9efb871395791c137f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_3fbce68d2f255b883c98faecf059937694900f01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_a04322bebaabe064cb014f4b9dc1f3a3f7aa0044.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="F:\software\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_162be05a719a6b698162a502f5f1c5101e80db6e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_ec7e354f10869e68d41f118ecc149b2f93b12f23.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_788196504adeb3fee5898fbf154eeb96158752ad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_f1045ec7b49c72b14203700b1a01f319d950987e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_76d16821fe033c7f1253108a5755eb58fea497e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\MyProject\RecProject\xposed\WTools\WToolSDKDemo\wtoolsdkroomlive\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_7977e2f498429aa4cc4df221ced13049b51c3c0f.jar" />
+    </item>
+
+</items>

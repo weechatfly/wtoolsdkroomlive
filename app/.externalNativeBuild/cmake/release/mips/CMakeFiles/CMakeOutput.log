@@ -1,0 +1,216 @@
+The target system is: Android - 14 - mips
+The host system is: Windows - 10.0.14393 - AMD64
+Determining if the C compiler works passed with the following output:
+Change Dir: E:/MyProject/RecProject/xposed/WTools/WToolSDKDemo/wtoolsdkroomlive/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeTmp
+
+Run Build Command:"F:\software\Android\sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_2d865"
+[1/2] Building C object CMakeFiles/cmTC_2d865.dir/testCCompiler.c.o
+[2/2] Linking C executable cmTC_2d865
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: E:/MyProject/RecProject/xposed/WTools/WToolSDKDemo/wtoolsdkroomlive/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeTmp
+
+Run Build Command:"F:\software\Android\sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_1bd7b"
+[1/2] Building C object CMakeFiles/cmTC_1bd7b.dir/CMakeCCompilerABI.c.o
+[2/2] Linking C executable cmTC_1bd7b
+Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+Target: mipsel-none-linux-android
+Thread model: posix
+InstalledDir: F:\software\Android\sdk\ndk-bundle\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android\4.9.x
+Selected GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x
+Candidate multilib: mips-r6;@march=mips32r6
+Candidate multilib: mips-r2;@march=mips32r2
+Candidate multilib: .;
+Selected multilib: .;
+ "F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/bin\\ld" --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --eh-frame-hdr -m elf32ltsmip -dynamic-linker /system/bin/linker -o cmTC_1bd7b "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtbegin_dynamic.o" -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1bd7b.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtend_android.o"
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(mipsel-linux-android-ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: E:/MyProject/RecProject/xposed/WTools/WToolSDKDemo/wtoolsdkroomlive/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"F:\software\Android\sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_1bd7b"]
+  ignore line: [[1/2] Building C object CMakeFiles/cmTC_1bd7b.dir/CMakeCCompilerABI.c.o]
+  ignore line: [[2/2] Linking C executable cmTC_1bd7b]
+  ignore line: [Android clang version 3.8.256229  (based on LLVM 3.8.256229)]
+  ignore line: [Target: mipsel-none-linux-android]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: F:\software\Android\sdk\ndk-bundle\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android\4.9.x]
+  ignore line: [Selected GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x]
+  ignore line: [Candidate multilib: mips-r6]
+  ignore line: [@march=mips32r6]
+  ignore line: [Candidate multilib: mips-r2]
+  ignore line: [@march=mips32r2]
+  ignore line: [Candidate multilib: .]
+  ignore line: []
+  ignore line: [Selected multilib: .]
+  ignore line: []
+  link line: [ "F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/bin\\ld" --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --eh-frame-hdr -m elf32ltsmip -dynamic-linker /system/bin/linker -o cmTC_1bd7b "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtbegin_dynamic.o" -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_1bd7b.dir/CMakeCCompilerABI.c.o -lgcc -ldl -lc -lgcc -ldl "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtend_android.o"]
+    arg [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/bin\ld] ==> ignore
+    arg [--sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips] ==> ignore
+    arg [--sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf32ltsmip] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_1bd7b] ==> ignore
+    arg [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\crtbegin_dynamic.o] ==> ignore
+    arg [-LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x] ==> dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x]
+    arg [-LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib] ==> dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib] ==> dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib] ==> dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib] ==> dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib] ==> dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [CMakeFiles/cmTC_1bd7b.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\crtend_android.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x] ==> [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib] ==> [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/mipsel-linux-android/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib] ==> [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib] ==> [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib] ==> [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/mipsel-linux-android/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib] ==> [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  implicit libs: [dl;c;dl]
+  implicit dirs: [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x;F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/mipsel-linux-android/lib;F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  implicit fwks: []
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: E:/MyProject/RecProject/xposed/WTools/WToolSDKDemo/wtoolsdkroomlive/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeTmp
+
+Run Build Command:"F:\software\Android\sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_223ef"
+[1/2] Building CXX object CMakeFiles/cmTC_223ef.dir/testCXXCompiler.cxx.o
+[2/2] Linking CXX executable cmTC_223ef
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: E:/MyProject/RecProject/xposed/WTools/WToolSDKDemo/wtoolsdkroomlive/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeTmp
+
+Run Build Command:"F:\software\Android\sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_3287e"
+[1/2] Building CXX object CMakeFiles/cmTC_3287e.dir/CMakeCXXCompilerABI.cpp.o
+[2/2] Linking CXX executable cmTC_3287e
+Android clang version 3.8.256229  (based on LLVM 3.8.256229)
+Target: mipsel-none-linux-android
+Thread model: posix
+InstalledDir: F:\software\Android\sdk\ndk-bundle\toolchains\llvm\prebuilt\windows-x86_64\bin
+Found candidate GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android\4.9.x
+Selected GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x
+Candidate multilib: mips-r6;@march=mips32r6
+Candidate multilib: mips-r2;@march=mips32r2
+Candidate multilib: .;
+Selected multilib: .;
+ "F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/bin\\ld" --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --eh-frame-hdr -m elf32ltsmip -dynamic-linker /system/bin/linker -o cmTC_3287e "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtbegin_dynamic.o" -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_3287e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtend_android.o"
+
+
+Parsed CXX implicit link information from above output:
+  link line regex: [^( *|.*[/\])(mipsel-linux-android-ld\.exe|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: E:/MyProject/RecProject/xposed/WTools/WToolSDKDemo/wtoolsdkroomlive/app/.externalNativeBuild/cmake/release/mips/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"F:\software\Android\sdk\cmake\3.6.3155560\bin\ninja.exe" "cmTC_3287e"]
+  ignore line: [[1/2] Building CXX object CMakeFiles/cmTC_3287e.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [[2/2] Linking CXX executable cmTC_3287e]
+  ignore line: [Android clang version 3.8.256229  (based on LLVM 3.8.256229)]
+  ignore line: [Target: mipsel-none-linux-android]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: F:\software\Android\sdk\ndk-bundle\toolchains\llvm\prebuilt\windows-x86_64\bin]
+  ignore line: [Found candidate GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android\4.9.x]
+  ignore line: [Selected GCC installation: F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x]
+  ignore line: [Candidate multilib: mips-r6]
+  ignore line: [@march=mips32r6]
+  ignore line: [Candidate multilib: mips-r2]
+  ignore line: [@march=mips32r2]
+  ignore line: [Candidate multilib: .]
+  ignore line: []
+  ignore line: [Selected multilib: .]
+  ignore line: []
+  link line: [ "F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/bin\\ld" --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips --eh-frame-hdr -m elf32ltsmip -dynamic-linker /system/bin/linker -o cmTC_3287e "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtbegin_dynamic.o" -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib -LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib -LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc --build-id --warn-shared-textrel --fatal-warnings --no-undefined -z noexecstack -z relro -z now --gc-sections -z nocopyreloc CMakeFiles/cmTC_3287e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc -lgcc -ldl -lc -lgcc -lgcc -ldl "F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\\crtend_android.o"]
+    arg [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/bin\ld] ==> ignore
+    arg [--sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips] ==> ignore
+    arg [--sysroot=F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf32ltsmip] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/system/bin/linker] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_3287e] ==> ignore
+    arg [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\crtbegin_dynamic.o] ==> ignore
+    arg [-LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x] ==> dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x]
+    arg [-LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib] ==> dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib] ==> dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib] ==> dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib] ==> dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib]
+    arg [-LF:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib] ==> dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--warn-shared-textrel] ==> ignore
+    arg [--fatal-warnings] ==> ignore
+    arg [--no-undefined] ==> ignore
+    arg [-znoexecstack] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-znow] ==> ignore
+    arg [--gc-sections] ==> ignore
+    arg [-znocopyreloc] ==> ignore
+    arg [CMakeFiles/cmTC_3287e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [-lstdc++] ==> lib [stdc++]
+    arg [-lm] ==> lib [m]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-lgcc] ==> lib [gcc]
+    arg [-ldl] ==> lib [dl]
+    arg [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib\crtend_android.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc]
+  remove lib [gcc]
+  remove lib [gcc]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x] ==> [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib/../lib] ==> [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/mipsel-linux-android/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/../lib] ==> [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib/mipsel-linux-android/../../lib] ==> [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x/../../../../mipsel-linux-android/lib] ==> [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/mipsel-linux-android/lib]
+  collapse library dir [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib] ==> [F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  implicit libs: [stdc++;m;dl;c;dl]
+  implicit dirs: [F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/lib/gcc/mipsel-linux-android/4.9.x;F:/software/Android/sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/windows-x86_64/mipsel-linux-android/lib;F:/software/Android/sdk/ndk-bundle/platforms/android-14/arch-mips/usr/lib]
+  implicit fwks: []
+
+
