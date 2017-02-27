@@ -41,7 +41,17 @@ public class RoomLiveService extends Service {
 
         try
         {
+
+            JSONArray jsonArrayMaster = new JSONArray(masterids);
+            for(int i=0;i<jsonArrayMaster.length();i++)
+            {
+                if(slaveids.indexOf(jsonArrayMaster.getString(i))>=0)
+                {
+                    slaveids = slaveids.replaceAll(jsonArrayMaster.getString(i),"");
+                }
+            }
             jsonArraySlaves = new JSONArray(slaveids);
+
         }
         catch (Exception e)
         {
@@ -71,10 +81,9 @@ public class RoomLiveService extends Service {
                     content = wToolSDK.decodeValue(jsonObject.getString("content"));
 
                     if(jsonArraySlaves!=null && masterids.indexOf("\""+event.getTalker()+"\"")>=0) {
-                        for (int i = 0; i < jsonArraySlaves.length(); i++) {
-                            wToolSDK.transferMessage(jsonArraySlaves.getString(i), event.getMsgType(),jsonObject.getString("msgid"));
+                        wToolSDK.transferMessage(jsonArraySlaves.toString(), event.getMsgType(),jsonObject.getString("msgid"));
 
-                        }
+
                     }
                 }
                 catch (Exception e)
