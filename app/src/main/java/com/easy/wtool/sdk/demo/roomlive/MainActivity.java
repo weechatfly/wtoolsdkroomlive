@@ -257,6 +257,7 @@ public class MainActivity extends AppCompatActivity {
                                         roomLiveParams.setMasterChatroomIds("[\""+wToolSDK.decodeValue(jsonArray.getJSONObject(masterWxIdIndex).getString("wxid"))+"\"]");
                                         roomLiveParams.setMasterChatroomNames(friends[masterWxIdIndex]);
                                         labelMasterChatroomIds.setText(DEF_MASTERCHATROOMS + "：" + friends[masterWxIdIndex]);
+                                        Toast.makeText(mContext, "设置已修改需要重启直播才会生效！", Toast.LENGTH_LONG).show();
                                     } catch (Exception e) {
 
                                     }
@@ -424,7 +425,7 @@ public class MainActivity extends AppCompatActivity {
                                             {
                                                 labelSlaveChatroomIds.setText(DEF_SLAVECHATROOMS + "：" + nicknames);
                                             }
-
+                                            Toast.makeText(mContext, "设置已修改需要重启直播才会生效！", Toast.LENGTH_LONG).show();
                                         }
 
                                     } catch (Exception e) {
