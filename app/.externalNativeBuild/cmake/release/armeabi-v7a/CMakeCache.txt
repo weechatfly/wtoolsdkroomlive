@@ -18,13 +18,22 @@
 ANDROID_ABI:UNINITIALIZED=armeabi-v7a
 
 //No help, variable specified on the command line.
-ANDROID_NATIVE_API_LEVEL:UNINITIALIZED=14
-
-//No help, variable specified on the command line.
 ANDROID_NDK:UNINITIALIZED=F:\software\Android\sdk\ndk-bundle
 
-//Path to a program.
+//No help, variable specified on the command line.
+ANDROID_PLATFORM:UNINITIALIZED=android-14
+
+//Archiver
 CMAKE_AR:FILEPATH=F:/software/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-ar.exe
+
+//Flags used by the compiler during all build types.
+CMAKE_ASM_FLAGS:STRING=
+
+//Flags used by the compiler during debug builds.
+CMAKE_ASM_FLAGS_DEBUG:STRING=
+
+//Flags used by the compiler during release builds.
+CMAKE_ASM_FLAGS_RELEASE:STRING=
 
 //Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
 // CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
@@ -125,7 +134,7 @@ CMAKE_OBJDUMP:FILEPATH=F:/software/Android/sdk/ndk-bundle/toolchains/arm-linux-a
 //Value Computed by CMake
 CMAKE_PROJECT_NAME:STATIC=Project
 
-//Path to a program.
+//Ranlib
 CMAKE_RANLIB:FILEPATH=F:/software/Android/sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64/bin/arm-linux-androideabi-ranlib.exe
 
 //Flags used by the linker during the creation of dll's.

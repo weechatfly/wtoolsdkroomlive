@@ -6,7 +6,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.Html;
+import android.text.TextWatcher;
 import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean [] checks;
     private AlertDialog selectDialog = null;
     private int masterWxIdIndex = 0;
+    private boolean isInited = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -115,11 +118,27 @@ public class MainActivity extends AppCompatActivity {
         final EditText editAuthCode = (EditText) findViewById(R.id.editAuthCode);
         //final TextView edtContent = (TextView) findViewById(R.id.edtContent);
         //edtContent.setMovementMethod(ScrollingMovementMethod.getInstance());
-        editAuthCode.setText(configUtils.get(ConfigUtils.KEY_AUTHCODE, "0279C8C340306804E57499CD112EB094CB13037A"));
-        if (!editAuthCode.getText().toString().equals("")) {
+        editAuthCode.setText(configUtils.get(ConfigUtils.KEY_AUTHCODE, ""));
+        if (!isInited && !editAuthCode.getText().toString().equals("")) {
             //初始化
             parseResult(wToolSDK.init(editAuthCode.getText().toString()));
+            isInited = true;
         }
+        editAuthCode.addTextChangedListener(new TextWatcher(){
+            public void afterTextChanged(Editable s) {
+
+                isInited = false;
+                configUtils.save(ConfigUtils.KEY_AUTHCODE, editAuthCode.getText().toString());
+                if (!isInited && !editAuthCode.getText().toString().equals("")) {
+                    //初始化
+                    parseResult(wToolSDK.init(editAuthCode.getText().toString()));
+
+                    isInited = true;
+                }
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after){}
+            public void onTextChanged(CharSequence s, int start, int before, int count){}
+        });
 
         if (ServiceUtils.isServiceRunning(mContext,RoomLiveService.class.getName())) {
             buttonRoomLive.setText("关闭直播");
@@ -138,6 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(mContext, "授权码不能为空！", Toast.LENGTH_LONG).show();
                         return;
                     }
+
                     if (roomLiveParams.getMasterChatroomIds().equals("")) {
                         Toast.makeText(mContext, "请设置主播群！", Toast.LENGTH_LONG).show();
                         return;
@@ -207,6 +227,15 @@ public class MainActivity extends AppCompatActivity {
         labelMasterChatroomIds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (editAuthCode.getText().toString().equals("")) {
+                    Toast.makeText(mContext, "授权码不能为空！", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (!isInited && !editAuthCode.getText().toString().equals("")) {
+                    //初始化
+                    parseResult(wToolSDK.init(editAuthCode.getText().toString()));
+                    isInited = true;
+                }
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 //builder.setIcon(R.drawable.ic_launcher);
                 builder.setTitle("选择主播群");
@@ -292,6 +321,15 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener onSelectWxIdClickListener = new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
+                if (editAuthCode.getText().toString().equals("")) {
+                    Toast.makeText(mContext, "授权码不能为空！", Toast.LENGTH_LONG).show();
+                    return;
+                }
+                if (!isInited && !editAuthCode.getText().toString().equals("")) {
+                    //初始化
+                    parseResult(wToolSDK.init(editAuthCode.getText().toString()));
+                    isInited = true;
+                }
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 //获取组件的资源id
                 int id = v.getId();
