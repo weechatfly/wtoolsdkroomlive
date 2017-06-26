@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
     private AlertDialog selectDialog = null;
     private int masterWxIdIndex = 0;
     private boolean isInited = false;
+    EditText editAppId;
+    EditText editAuthCode;
+    WToolSDK wToolSDK = new WToolSDK();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,26 +58,28 @@ public class MainActivity extends AppCompatActivity {
         mContext = MainActivity.this;
 
         final RoomLiveParams roomLiveParams = new RoomLiveParams(mContext);
-        final WToolSDK wToolSDK = new WToolSDK();
+
         //this.setTitle(this.getTitle() + " - V" + wToolSDK.getVersion());
 
         configUtils = new ConfigUtils(this);
         wToolSDK.encodeValue("1");
-
+        //Log.d(LOG_TAG,"encode: "+wToolSDK.encodeValue("http://www.baidu.com"));
         TextView textViewPrompt = (TextView) findViewById(R.id.textViewPrompt);
         textViewPrompt.setClickable(true);
         textViewPrompt.setMovementMethod(LinkMovementMethod.getInstance());
         String prompt = "<b>本软件基于<a href=\"http://repo.xposed.info/module/com.easy.wtool\">微控工具xp模块-开发版[微信(wechat)二次开发模块]</a>"
-                +"开发，使用前请确认模块已经安装，模块最低版本：1.0.0.251[1.0.0.131-开发版]</b>";
+                +"开发，使用前请确认模块已经安装，模块最低版本：1.0.1.102[1.0.1.102-开发版]</b>";
         textViewPrompt.setText(Html.fromHtml(prompt));
         // Example of a call to a native method
         //TextView tv = (TextView) findViewById(R.id.sample_text);
         //tv.setText(stringFromJNI());
         final Button buttonRoomLive = (Button) findViewById(R.id.buttonRoomLive);
+
         final CheckBox chkMessageText = (CheckBox)findViewById(R.id.chkMessageText);
         final CheckBox chkMessageImage = (CheckBox)findViewById(R.id.chkMessageImage);
         final CheckBox chkMessageVoice = (CheckBox)findViewById(R.id.chkMessageVoice);
         final CheckBox chkMessageVideo = (CheckBox)findViewById(R.id.chkMessageVideo);
+        final CheckBox chkMultiText = (CheckBox)findViewById(R.id.chkMultiText);
         String msgTypes = roomLiveParams.getTransferMessages();
         //Log.d(LOG_TAG,"msgtypes: "+msgTypes);
         if(!msgTypes.equals(""))
@@ -100,6 +105,10 @@ public class MainActivity extends AppCompatActivity {
                     {
                         chkMessageVideo.setChecked(true);
                     }
+                    else if(jsonArray.getInt(i)==49)
+                    {
+                        chkMultiText.setChecked(true);
+                    }
                 }
             }
             catch (Exception e)
@@ -115,26 +124,27 @@ public class MainActivity extends AppCompatActivity {
         labelSlaveChatroomIds.setText(DEF_SLAVECHATROOMS+(roomLiveParams.getSlaveChatroomIds().equals("")?"":":"+roomLiveParams.getSlaveChatroomNames()));
 
 
-        final EditText editAuthCode = (EditText) findViewById(R.id.editAuthCode);
+        editAppId = (EditText) findViewById(R.id.editAppId);
+        editAuthCode = (EditText) findViewById(R.id.editAuthCode);
         //final TextView edtContent = (TextView) findViewById(R.id.edtContent);
         //edtContent.setMovementMethod(ScrollingMovementMethod.getInstance());
+        editAppId.setText(configUtils.get(ConfigUtils.KEY_APPID, ""));
         editAuthCode.setText(configUtils.get(ConfigUtils.KEY_AUTHCODE, ""));
-        if (!isInited && !editAuthCode.getText().toString().equals("")) {
-            //初始化
-            parseResult(wToolSDK.init(editAuthCode.getText().toString()));
-            isInited = true;
-        }
+        initSDK();
+        editAppId.addTextChangedListener(new TextWatcher(){
+            public void afterTextChanged(Editable s) {
+
+                isInited = false;
+
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after){}
+            public void onTextChanged(CharSequence s, int start, int before, int count){}
+        });
         editAuthCode.addTextChangedListener(new TextWatcher(){
             public void afterTextChanged(Editable s) {
 
                 isInited = false;
-                configUtils.save(ConfigUtils.KEY_AUTHCODE, editAuthCode.getText().toString());
-                if (!isInited && !editAuthCode.getText().toString().equals("")) {
-                    //初始化
-                    parseResult(wToolSDK.init(editAuthCode.getText().toString()));
 
-                    isInited = true;
-                }
             }
             public void beforeTextChanged(CharSequence s, int start, int count, int after){}
             public void onTextChanged(CharSequence s, int start, int before, int count){}
@@ -153,8 +163,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(buttonRoomLive.getTag().equals(0)) {
-                    if (editAuthCode.getText().toString().equals("")) {
-                        Toast.makeText(mContext, "授权码不能为空！", Toast.LENGTH_LONG).show();
+                    if(!initSDK())
+                    {
                         return;
                     }
 
@@ -204,11 +214,20 @@ public class MainActivity extends AppCompatActivity {
                         }
                         msgTypes += "43,62";
                     }
+                    if(chkMultiText.isChecked())
+                    {
+                        if(!msgTypes.equals(""))
+                        {
+                            msgTypes += ",";
+                        }
+                        msgTypes += "49";
+                    }
                     if(!msgTypes.equals(""))
                     {
                         msgTypes = "["+msgTypes+"]";
                     }
                     //Log.d(LOG_TAG,"msgtypes: "+msgTypes);
+                    roomLiveParams.setAppId(editAppId.getText().toString());
                     roomLiveParams.setAuthCode(editAuthCode.getText().toString());
                     roomLiveParams.setTransferMessages(msgTypes);
                     startService(i);
@@ -227,21 +246,32 @@ public class MainActivity extends AppCompatActivity {
         labelMasterChatroomIds.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editAuthCode.getText().toString().equals("")) {
-                    Toast.makeText(mContext, "授权码不能为空！", Toast.LENGTH_LONG).show();
+                if(!initSDK())
+                {
                     return;
                 }
-                if (!isInited && !editAuthCode.getText().toString().equals("")) {
-                    //初始化
-                    parseResult(wToolSDK.init(editAuthCode.getText().toString()));
-                    isInited = true;
-                }
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 //builder.setIcon(R.drawable.ic_launcher);
                 builder.setTitle("选择主播群");
-                String content;
-                content = wToolSDK.getChatrooms(0, 0,false);
+                String content = "";
+                //content = wToolSDK.getChatrooms(0, 0,false);
+                try {
+                    JSONObject jsonTask = new JSONObject();
+                    jsonTask.put("type", 6);
+                    jsonTask.put("taskid", System.currentTimeMillis());
+                    jsonTask.put("content", new JSONObject());
+                    jsonTask.getJSONObject("content").put("pageindex", 0);
+                    jsonTask.getJSONObject("content").put("pagecount", 0);
+                    jsonTask.getJSONObject("content").put("ismembers", 0);
 
+                    content = wToolSDK.sendTask(jsonTask.toString());
+                }
+                catch(Exception e)
+                {
+                    e.printStackTrace();
+                    Log.e(LOG_TAG,"err",e);
+                }
 
                 String text = "";
                 String masterids = roomLiveParams.getMasterChatroomIds();
@@ -321,21 +351,16 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener onSelectWxIdClickListener = new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                if (editAuthCode.getText().toString().equals("")) {
-                    Toast.makeText(mContext, "授权码不能为空！", Toast.LENGTH_LONG).show();
+                if(!initSDK())
+                {
                     return;
-                }
-                if (!isInited && !editAuthCode.getText().toString().equals("")) {
-                    //初始化
-                    parseResult(wToolSDK.init(editAuthCode.getText().toString()));
-                    isInited = true;
                 }
                 final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 //获取组件的资源id
                 int id = v.getId();
                 final boolean isselectspeakers = id==R.id.labelMasterSpeakers;
                 builder.setTitle(isselectspeakers?"选择主讲人":"选择从播群");
-                String content;
+                String content = "";
                 String text = "";
                 String wxid;
                 String masterids = roomLiveParams.getMasterChatroomIds();
@@ -346,7 +371,22 @@ public class MainActivity extends AppCompatActivity {
                 }
                 try {
                     final JSONArray jsonArray = new JSONArray();
-                    content = wToolSDK.getChatrooms(0, 0,isselectspeakers);
+                    //content = wToolSDK.getChatrooms(0, 0,isselectspeakers);
+                    try {
+                        JSONObject jsonTask = new JSONObject();
+                        jsonTask.put("type", 6);
+                        jsonTask.put("taskid", System.currentTimeMillis());
+                        jsonTask.put("content", new JSONObject());
+                        jsonTask.getJSONObject("content").put("pageindex", 0);
+                        jsonTask.getJSONObject("content").put("pagecount", 0);
+                        jsonTask.getJSONObject("content").put("ismembers", isselectspeakers?1:0);
+
+                        content = wToolSDK.sendTask(jsonTask.toString());
+                    }
+                    catch(Exception e)
+                    {
+
+                    }
                     final JSONObject jsonObject = new JSONObject(content);
                     if (jsonObject.getInt("result") == 0) {
                         //edtContent.setText(content);
@@ -599,7 +639,29 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    private boolean initSDK()
+    {
+        boolean bok = false;
+        if(editAppId.getText().toString().equals(""))
+        {
+            Toast.makeText(mContext, "AppId不能为空！", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if(editAuthCode.getText().toString().equals(""))
+        {
+            Toast.makeText(mContext, "授权码不能为空不能为空！", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        if (!isInited && !editAppId.getText().toString().equals("") && !editAuthCode.getText().toString().equals("")) {
+            //初始化
+            parseResult(wToolSDK.init(editAppId.getText().toString(),editAuthCode.getText().toString()));
+            configUtils.save(ConfigUtils.KEY_APPID, editAppId.getText().toString());
+            configUtils.save(ConfigUtils.KEY_AUTHCODE, editAuthCode.getText().toString());
+            isInited = true;
+            bok = true;
+        }
+        return isInited;
+    }
 
     private void parseResult(String result) {
         String text = "";

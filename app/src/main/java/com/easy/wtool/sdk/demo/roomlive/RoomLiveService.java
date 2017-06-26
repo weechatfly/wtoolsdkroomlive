@@ -57,8 +57,8 @@ public class RoomLiveService extends Service {
         {
             jsonArraySlaves = null;
         }
-        Log.d(LOG_TAG,"RoomLiveService.onStartCommand: "+roomLiveParams.getAuthCode());
-        wToolSDK.init(roomLiveParams.getAuthCode());
+        Log.d(LOG_TAG,"RoomLiveService.onStartCommand: "+roomLiveParams.getAppId()+","+roomLiveParams.getAuthCode());
+        wToolSDK.init(roomLiveParams.getAppId(),roomLiveParams.getAuthCode());
         //处理消息 回调的Handler
         final Handler messageHandler = new Handler() {
             @Override
@@ -81,9 +81,18 @@ public class RoomLiveService extends Service {
                     content = wToolSDK.decodeValue(jsonObject.getString("content"));
 
                     if(jsonArraySlaves!=null && masterids.indexOf("\""+event.getTalker()+"\"")>=0) {
-                        wToolSDK.transferMessage(jsonArraySlaves.toString(), event.getMsgType(),jsonObject.getString("msgid"));
+                        //wToolSDK.transferMessage(jsonArraySlaves.toString(), event.getMsgType(),jsonObject.getString("msgid"));
+                        for(int i=0;i<jsonArraySlaves.length();i++) {
+                            JSONObject jsonTask = new JSONObject();
+                            jsonTask.put("type", 12);
+                            jsonTask.put("taskid", System.currentTimeMillis());
+                            jsonTask.put("content", new JSONObject());
+                            jsonTask.getJSONObject("content").put("talker",jsonArraySlaves.getString(i));
+                            jsonTask.getJSONObject("content").put("msgtype",  event.getMsgType());
+                            jsonTask.getJSONObject("content").put("msgid", jsonObject.getString("msgid"));
 
-
+                            content = wToolSDK.sendTask(jsonTask.toString());
+                        }
                     }
                 }
                 catch (Exception e)

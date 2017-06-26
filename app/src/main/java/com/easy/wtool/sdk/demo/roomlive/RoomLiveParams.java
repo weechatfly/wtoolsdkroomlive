@@ -9,6 +9,7 @@ import android.content.Context;
 public class RoomLiveParams {
     private static final String SECTION = "wtoolroomliveparams";
     String authCode = "";
+    String appId = "";
     String masterChatroomIds,masterChatroomNames;
     String masterSpeakers,masterSpeakerNames;
     String slaveChatroomIds,slaveChatroomNames;
@@ -95,7 +96,7 @@ public class RoomLiveParams {
     }
 
     public String getTransferMessages() {
-        return configUtils.get(SECTION,"TransferMessages","[1,3,34,43,62]");
+        return configUtils.get(SECTION,"TransferMessages","[1,3,34,43,62,49]");
     }
 
     public void setTransferMessages(String transferMessages) {
@@ -114,5 +115,13 @@ public class RoomLiveParams {
     public void setAuthCode(String authCode) {
         this.authCode = authCode;
         configUtils.save(SECTION,"authcode",authCode);
+    }
+    public String getAppId() {
+        return configUtils.get(SECTION,"appid","");
+    }
+
+    public void setAppId(String appid) {
+        this.appId = appid;
+        configUtils.save(SECTION,"appid",appId);
     }
 }
