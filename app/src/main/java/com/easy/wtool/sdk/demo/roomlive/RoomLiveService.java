@@ -79,6 +79,7 @@ public class RoomLiveService extends Service {
                 {
                     JSONObject jsonObject = new JSONObject(content);
                     content = wToolSDK.decodeValue(jsonObject.getString("content"));
+                    Log.d(LOG_TAG, "on message: " + event.getTalker()+"["+event.getFrom()+"]" + "," +content);
 
                     if(jsonArraySlaves!=null && masterids.indexOf("\""+event.getTalker()+"\"")>=0) {
                         //wToolSDK.transferMessage(jsonArraySlaves.toString(), event.getMsgType(),jsonObject.getString("msgid"));
@@ -90,20 +91,21 @@ public class RoomLiveService extends Service {
                             jsonTask.getJSONObject("content").put("talker",jsonArraySlaves.getString(i));
                             jsonTask.getJSONObject("content").put("msgtype",  event.getMsgType());
                             jsonTask.getJSONObject("content").put("msgid", jsonObject.getString("msgid"));
+                            //jsonTask.getJSONObject("content").put("timeout",-1);
 
-                            content = wToolSDK.sendTask(jsonTask.toString());
-                        }
-                    }
-                }
-                catch (Exception e)
-                {
-
-                }
-                Log.d(LOG_TAG, "on message: " + event.getTalker()+"["+event.getFrom()+"]" + "," +content);
-
-
-
+                content = wToolSDK.sendTask(jsonTask.toString());
             }
+        }
+    }
+                catch (Exception e)
+    {
+
+    }
+
+
+
+
+}
         });
         try {
             //设置消息过滤
@@ -172,7 +174,7 @@ public class RoomLiveService extends Service {
     public void onDestroy() {
         Log.d(LOG_TAG,"RoomLiveService.onDestroy");
 
-
+        wToolSDK.unload();
         Toast.makeText(this, "直播服务已关闭", Toast.LENGTH_LONG).show();
     }
 }
